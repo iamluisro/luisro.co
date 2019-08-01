@@ -1,0 +1,63 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "This is Luis Fco Rodriguez Rodriguez's website meant to feature my thoughts, my work, and how I can help you and the world.",
+  "version": "0.1.0",
+  "author": "Luis Rodriguez hola@iamluisro.co",
+  "dependencies": {
+    "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
+    "@contentful/rich-text-from-markdown": "^13.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "babel-plugin-styled-components": "^1.10.6",
+    "dotenv": "^8.0.0",
+    "firebase": "^6.3.3",
+    "fontawesome": "^5.6.3",
+    "gatsby": "^2.13.31",
+    "gatsby-image": "^2.2.6",
+    "gatsby-plugin-manifest": "^2.2.3",
+    "gatsby-plugin-offline": "^2.2.4",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sharp": "^2.2.8",
+    "gatsby-plugin-styled-components": "^3.1.2",
+    "gatsby-plugin-typography": "^2.3.2",
+    "gatsby-source-contentful": "^2.1.15",
+    "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-transformer-remark": "^2.6.9",
+    "gatsby-transformer-sharp": "^2.2.4",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-typeform-embed": "^0.2.1",
+    "react-typography": "^0.16.19",
+    "styled-components": "^4.3.2",
+    "typography": "^0.16.19"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
