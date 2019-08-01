@@ -48,7 +48,7 @@ const FormButton = styled.button`
 `
 export default function Forms() {
   return (
-    <DivForm name="contact" method="POST" data-netlify="true">
+    <DivForm name="contact" method="POST">
       <input type="hidden" name="form-name" value="contact" />
       <label>
         <Input type="text" name="name" placeholder="Your Name" />
