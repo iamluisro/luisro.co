@@ -48,14 +48,9 @@ const FormButton = styled.button`
 `
 export default function Forms() {
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify-recaptcha="true"
-      data-netlify="true"
-    >
+    <form method="post" netlify-honeypot="bot-field" data-netlify="true">
       {/* You still need to add the hidden input with the form name to your JSX form */}
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
       <label>
         <input type="text" name="name" placeholder="Your Name" />
       </label>
