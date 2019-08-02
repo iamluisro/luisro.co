@@ -7,7 +7,6 @@ import {
   Intro,
   PastWork,
   HowiHelp,
-  useGetData,
 } from "../components"
 
 const IndexPage = () => {
