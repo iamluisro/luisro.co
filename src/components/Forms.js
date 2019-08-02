@@ -48,24 +48,32 @@ const FormButton = styled.button`
 `
 export default function Forms() {
   return (
-    <DivForm name="contact" method="POST">
+    <form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      {/* You still need to add the hidden input with the form name to your JSX form */}
+      <input type="hidden" name="form-name" value="contact" />
+
       <input type="hidden" name="form-name" value="contact" />
       <label>
-        <Input type="text" name="name" placeholder="Your Name" />
+        <input type="text" name="name" placeholder="Your Name" />
       </label>
 
       <label>
-        <Input type="email" name="email" placeholder="Your Email" />
+        <input type="email" name="email" placeholder="Your Email" />
       </label>
 
       <label>
-        <TextArea
+        <textarea
           name="message"
           placeholder="Anything else you'd like to share?"
-        ></TextArea>
+        ></textarea>
       </label>
 
-      <FormButton type="submit">Send</FormButton>
-    </DivForm>
+      <button type="submit">Send</button>
+    </form>
   )
 }
