@@ -1,18 +1,32 @@
 import React from "react"
+import styled from "styled-components"
+
+const FormContainer = styled.div`
+  margin: 0;
+`
+
+const StyledForm = styled.form`
+  display: grid;
+  margin: 0;
+`
+
+const StyledFormInput = styled.input`
+  margin: 1.5em;
+`
 
 export default function Forms() {
   return (
-    <div>
-      <form method="post" action="#" data-netlify="true" name="contact">
+    <FormContainer>
+      <StyledForm method="post" action="#" data-netlify="true" name="contact">
         <input type="hidden" name="form-name" value="contact" />
-        <input
+        <StyledFormInput
           type="text"
           name="name"
           id="name"
           placeholder="your name"
           required
         />
-        <input
+        <StyledFormInput
           type="text"
           name="email"
           id="email"
@@ -26,8 +40,8 @@ export default function Forms() {
           rows="4"
           required
         />
-        <input type="submit" value="Send Message" />
-      </form>
-    </div>
+        <StyledFormInput type="submit" value="Send Message" />
+      </StyledForm>
+    </FormContainer>
   )
 }
