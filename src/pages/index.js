@@ -3,7 +3,6 @@ import React from "react"
 import {
   SEO,
   ThinkAbout,
-  Sidebar,
   About,
   Intro,
   PastWork,
@@ -15,9 +14,9 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <Sidebar>
+      <div>
         <About />
-      </Sidebar>
+      </div>
       <div>
         <Intro />
         <ThinkAbout />
