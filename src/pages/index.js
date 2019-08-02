@@ -1,13 +1,8 @@
 import React from "react"
 
-import {
-  SEO,
-  ThinkAbout,
-  About,
-  Intro,
-  PastWork,
-  HowiHelp,
-} from "../components"
+import { SEO, ThinkAbout, Intro, PastWork, HowiHelp } from "../components"
+
+import About from "../components/About"
 
 const IndexPage = () => {
   return (
