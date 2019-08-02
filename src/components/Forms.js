@@ -1,125 +1,90 @@
-import React from "react"
-import { navigate } from "gatsby-link"
-import styled from "styled-components"
+import React, { Component } from "react"
+import { navigate } from "gatsby"
 
-const DivForm = styled.form`
-  margin: 0 0.67em 0em 0em;
-  display: grid;
-`
-
-const Input = styled.input`
-  padding: 0.5em;
-  margin: 0.5em;
-  background: #684a83;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  width: 95%;
-  &:focus {
-    background: 1px #59c3c3;
+class Forms extends Component {
+  constructor(props) {
+    super(props)
+    this.ContactForm = React.createRef()
+    this.state = {}
   }
+  encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
   }
-`
-
-const TextArea = styled.textarea`
-  padding: 0.5em;
-  margin: 0.5em;
-  background: #684a83;
-  color: #fff;
-  border: none;
-  width: 95%;
-  height: 5em;
-  border-radius: 3px;
-  &:focus {
-    background: #59c3c3;
-  }
-`
-const FormButton = styled.button`
-  display: grid;
-  cursor: default;
-  margin: 0 0 1em 0;
-  background-color: #684a83;
-  justify-self: center;
-  color: white;
-  width: 30%;
-  font-size: 0.9rem;
-  padding: 0.6rem;
-  font-weight: 500;
-  border-radius: 24px;
-`
-
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-
-export default function Contact() {
-  const [state, setState] = React.useState({})
-
-  const handleChange = e => {
-    setState({ [e.target.name]: e.target.value })
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault()
-    const form = e.target
+    const form = this.ContactForm.current
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
+      body: this.encode({
         "form-name": form.getAttribute("name"),
-        ...state,
+        ...this.state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
+      .then(response => {
+        console.log("====================================")
+        console.log(`${JSON.stringify(response, null, 2)}`)
+        console.log("====================================")
+        navigate(form.getAttribute("action"))
+      })
+      .catch(error => {
+        console.log("====================================")
+        console.log(`error in submiting the form data:${error}`)
+        console.log("====================================")
+      })
   }
-
-  return (
-    <div>
-      <h1>Contact</h1>
+  render() {
+    return (
       <form
         name="contact"
         method="post"
         action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
+        onSubmit={this.handleSubmit}
+        ref={this.ContactForm}
       >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>
             Don’t fill this out:{" "}
-            <input name="bot-field" onChange={handleChange} />
+            <input name="bot-field" onChange={this.handleChange} />
           </label>
         </p>
         <p>
           <label>
             Your name:
             <br />
-            <input type="text" name="name" onChange={handleChange} />
+            <input type="text" name="name" onChange={this.handleChange} />
           </label>
         </p>
         <p>
           <label>
             Your email:
             <br />
-            <input type="email" name="email" onChange={handleChange} />
+            <input type="email" name="email" onChange={this.handleChange} />
           </label>
         </p>
         <p>
           <label>
             Message:
             <br />
-            <textarea name="message" onChange={handleChange} />
+            <textarea name="message" onChange={this.handleChange} />
           </label>
         </p>
         <p>
           <button type="submit">Send</button>
+          <input type="reset" value="Eraser" />
         </p>
       </form>
-    </div>
-  )
+    )
+  }
 }
+export default Forms
