@@ -50,29 +50,24 @@ export default function Forms() {
   return (
     <form
       name="contact"
-      method="post"
+      method="POST"
+      data-netlify-recaptcha="true"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
     >
       {/* You still need to add the hidden input with the form name to your JSX form */}
-      <input type="hidden" name="form-name" value="contact" />
-
       <input type="hidden" name="form-name" value="contact" />
       <label>
         <input type="text" name="name" placeholder="Your Name" />
       </label>
-
       <label>
         <input type="email" name="email" placeholder="Your Email" />
       </label>
-
       <label>
         <textarea
           name="message"
           placeholder="Anything else you'd like to share?"
         ></textarea>
       </label>
-
       <button type="submit">Send</button>
     </form>
   )
