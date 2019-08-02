@@ -12,24 +12,9 @@ import {
 } from "../components"
 
 const IndexPage = () => {
-  const fbdata = useGetData()
-  console.log(fbdata)
-
-  return fbdata.length === 0 ? (
-    <h1>Cargando...</h1>
-  ) : (
+  return (
     <>
       <SEO title="Home" />
-      <Sidebar>
-        <About
-          avatar={fbdata.avatar}
-          name={fbdata.name}
-          profession={fbdata.profession}
-          bio={fbdata.bio}
-          address={fbdata.address}
-          social={fbdata.social}
-        />
-      </Sidebar>
 
       <div>
         <Intro />
