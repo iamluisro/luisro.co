@@ -34,6 +34,7 @@ const AboutImg = styled.img`
 const StyledHeaderLink = styled(props => <Link {...props} />)`
   margin: 0 0 0 0;
   text-align: center;
+  color: #684a83;
   font-size: 2em;
   text-decoration: none;
 `
