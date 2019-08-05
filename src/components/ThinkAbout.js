@@ -74,6 +74,7 @@ export const MoreButton = styled.button`
 const StyledPublishedDate = styled.p`
   font-size: 0.67em;
   margin: 0.67em 0 0 0;
+  color: #684a83;
 `
 
 export const ReadPostButton = styled.button`

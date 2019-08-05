@@ -8,6 +8,7 @@ const StyledDiv = styled.div`
 
 const StyledHeader = styled.p`
   font-size: 2em;
+  color: #684a83;
   text-align: center;
   margin: 0 0 0.3em 0;
 `
