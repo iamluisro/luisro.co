@@ -48,6 +48,7 @@ const StyledDescription = styled.p`
 const StyledPostLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   margin: 0 0 0.67em 0;
+  color: #684a83;
 `
 
 const PostinLink = styled.p`
