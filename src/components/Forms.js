@@ -4,7 +4,6 @@ import styled from "styled-components"
 const FormContainer = styled.div`
   display: grid;
   grid-template-rows: auto;
-  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
 `
 
 const StyledForm = styled.form`
