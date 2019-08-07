@@ -38,7 +38,7 @@ const StyledHeaderLink = styled(props => <Link {...props} />)`
   font-size: 2em;
   text-decoration: none;
 `
-const StyledDescription = styled.p`
+const StyledDescription = styled.div`
   margin: 1em 0 0 0;
   align-items: center;
   font-size: 1em;
