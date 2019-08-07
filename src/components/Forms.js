@@ -4,6 +4,7 @@ import styled from "styled-components"
 const FormContainer = styled.div`
   display: grid;
   grid-template-rows: auto;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
 `
 
 const StyledForm = styled.form`
@@ -15,7 +16,7 @@ const StyledFormInput = styled.input`
   padding: 1em;
   background: #ebebeb;
   color: #684a83;
-  border: none;
+  border: 1px solid #684a8380;
   border-radius: 3px;
   width: 100%;
   height: 45px;
@@ -31,7 +32,7 @@ const TextArea = styled.textarea`
   padding: 1em;
   background: #ebebeb;
   color: #684a83;
-  border: none;
+  border: 1px solid #684a8380;
   border-radius: 3px;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
