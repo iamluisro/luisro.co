@@ -64,11 +64,11 @@ export const MoreButton = styled.button`
   margin: auto;
   background-color: #684a83;
   color: white;
-  width: 43%;
+  width: 50%;
   font-size: 0.9rem;
   padding: 0.6rem;
   font-weight: 500;
-  border-radius: 24px;
+  border-radius: 10px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 `
 
@@ -76,18 +76,6 @@ const StyledPublishedDate = styled.p`
   font-size: 0.67em;
   margin: 0.67em 0 0 0;
   color: #684a83;
-`
-
-export const ReadPostButton = styled.button`
-  cursor: default;
-  background-color: #684a83;
-  margin: 0.67em 0 0 0;
-  color: white;
-  width: 33%;
-  font-size: 0.9rem;
-  padding: 0.6rem;
-  border-radius: 24px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 `
 
 const ThinkAbout = props => {
@@ -152,7 +140,6 @@ const ThinkAbout = props => {
                 {" "}
                 Published: {moment(post.publishDate).format("MMM DD, YYYY")}
               </StyledPublishedDate>
-              <ReadPostButton>Read</ReadPostButton>
             </StyledDescriptionPostDiv>
           </StyledPostLink>
         </StyledPostDiv>

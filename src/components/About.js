@@ -24,8 +24,19 @@ const AboutAvatar = styled.img`
   border-radius: 50%;
   padding: 0 0 0 0;
   justify-self: center;
+  box-shadow: 0 2.5px 5px #684a8380;
 `
-const AboutTxt = styled.div`
+const AboutName = styled.p`
+  text-align: center;
+  font-size: 2em;
+`
+
+const AboutShort = styled.p`
+  text-align: center;
+  font-size: 1em;
+`
+
+const AboutTxt = styled.p`
   text-align: center;
   font-size: 1.25em;
   margin: 0 0 0 0;
@@ -36,12 +47,16 @@ export default function About() {
     <div className="About">
       <AboutContainer>
         <AboutAvatar src={Avatar} alt="Luis Francisco Rodriguez Rodriguez" />
+        <AboutName>Luis Fco Rodríguez Rodríguez</AboutName>
+        <AboutShort>Product Manager turned developer</AboutShort>
+
         <AboutTxt>
-          Currently finding myself. I'm learning to be a fullstack developer. I
-          continue helping individuals learn about entrepreneurship through
-          experiential programs. Music fan and music builder.
+          Currently finding myself. <br />
+          I'm learning to be a fullstack developer. <br />I continue helping
+          individuals learn about entrepreneurship through experiential
+          programs. <br />
+          Music fan and music builder.
         </AboutTxt>
-        <AboutTxt> Coder turned Product Manager </AboutTxt>
         <AboutTxt>CDMX, México</AboutTxt>
         <Social />
       </AboutContainer>

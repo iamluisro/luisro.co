@@ -8,7 +8,8 @@ const ConsoleLog = ({ children }) => {
   return false
 }
 const SociaStyle = styled.div`
-	margin: 0.67em auto 0;
+	margin-top: 0.67em;
+  text-align: center;
 	display: block:
 `
 
@@ -20,7 +21,7 @@ const SocialUl = styled.ul`
 
 const SocialLi = styled.li`
   display: inline;
-  margin: 0 1em 0 0;
+  margin: 0 2.5em 0 0;
 `
 
 const SocialAnchor = styled.a`
@@ -53,6 +54,7 @@ const getColor = name => {
 
 const SocialIcon = styled(props => <FontAwesomeIcon {...props} />)`
   color: ${props => props.theme.color};
+  font-size: 2em;
 `
 
 const Social = () => (

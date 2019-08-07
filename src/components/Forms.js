@@ -13,8 +13,8 @@ const StyledForm = styled.form`
 const StyledFormInput = styled.input`
   margin: 0 0 0.67em 0;
   padding: 1em;
-  background: #684a83;
-  color: #fff;
+  background: #ebebeb;
+  color: #684a83;
   border: none;
   border-radius: 3px;
   width: 100%;
@@ -29,8 +29,8 @@ const StyledFormInput = styled.input`
 const TextArea = styled.textarea`
   margin: 0 0 0.67em 0;
   padding: 1em;
-  background: #684a83;
-  color: #fff;
+  background: #ebebeb;
+  color: #684a83;
   border: none;
   border-radius: 3px;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
@@ -40,18 +40,21 @@ const TextArea = styled.textarea`
     background: 1px #59c3c3;
   }
 `
-const FormButton = styled.button`
-  display: grid;
-  cursor: default;
-  margin: 0 0 1em 0;
-  background-color: #684a83;
-  justify-self: center;
-  color: white;
-  width: 30%;
-  font-size: 0.9rem;
-  padding: 0.6rem;
-  font-weight: 500;
-  border-radius: 24px;
+
+const StyledFormInputButton = styled.input`
+  margin: 0 0 0.67em 0;
+  padding: 1em;
+  background: #684a83;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  height: 45px;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  &:focus {
+    background: 1px #59c3c3;
+  }
 `
 
 export default function Forms() {
@@ -80,7 +83,7 @@ export default function Forms() {
           rows="4"
           required
         />
-        <StyledFormInput type="submit" value="Send Message" />
+        <StyledFormInputButton type="submit" value="Send Message" />
       </StyledForm>
     </FormContainer>
   )

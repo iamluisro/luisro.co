@@ -17,7 +17,7 @@ const IntroTxt = styled.p`
   margin: 0 0 0 0;
   color: #ffff;
   font-size: 1.5em;
-  text-align: justify;
+  text-align: center;
 `
 
 export default function Intro() {

@@ -11,7 +11,7 @@ export default function pastWork() {
   return (
     <div>
       <AboutContainer>This is my past work</AboutContainer>
-      <p>This is my past work</p>
+      <p>This page is under construction</p>
     </div>
   )
 }
