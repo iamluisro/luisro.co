@@ -7,12 +7,12 @@ const FormContainer = styled.div`
 `
 
 const StyledForm = styled.form`
-  margin: 1.7em;
+  margin: 1.25em 2.5em 1.25em 2.5em;
 `
 
 const StyledFormInput = styled.input`
   margin: 0 0 0.67em 0;
-  padding: 0.3em;
+  padding: 1em;
   background: #684a83;
   color: #fff;
   border: none;
@@ -25,14 +25,10 @@ const StyledFormInput = styled.input`
     background: 1px #59c3c3;
   }
 `
-const DivForm = styled.form`
-  margin: 0 0.67em 0em 0em;
-  display: grid;
-`
 
 const TextArea = styled.textarea`
   margin: 0 0 0.67em 0;
-  padding: 0.3em;
+  padding: 1em;
   background: #684a83;
   color: #fff;
   border: none;

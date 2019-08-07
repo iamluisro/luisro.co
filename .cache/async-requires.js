@@ -4,6 +4,7 @@ const preferDefault = m => m && m.default || m
 exports.components = {
   "component---src-templates-blog-post-contentful-js": () => import("/Users/luis/coding_proyects/luisro.co/src/templates/blog-post-contentful.js" /* webpackChunkName: "component---src-templates-blog-post-contentful-js" */),
   "component---src-templates-past-work-contentful-js": () => import("/Users/luis/coding_proyects/luisro.co/src/templates/past-work-contentful.js" /* webpackChunkName: "component---src-templates-past-work-contentful-js" */),
+  "component---cache-dev-404-page-js": () => import("/Users/luis/coding_proyects/luisro.co/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("/Users/luis/coding_proyects/luisro.co/src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
   "component---src-pages-index-js": () => import("/Users/luis/coding_proyects/luisro.co/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
   "component---src-pages-page-2-jsx": () => import("/Users/luis/coding_proyects/luisro.co/src/pages/page-2.jsx" /* webpackChunkName: "component---src-pages-page-2-jsx" */),

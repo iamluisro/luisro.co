@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const IntroContainer = styled.div`
   display: grid;
-  padding: 2em 1em 2em 1em;
+  padding: 1.3em 2.5em 1.3em 2.5em;
   background-color: #684a83;
 `
 const IntroHead = styled.div`

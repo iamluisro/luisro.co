@@ -12,7 +12,7 @@ const AboutContainer = styled.div`
   display: grid;
   height: 100%;
   grid-template-columns: 1fr;
-  margin: 0em 1.5em 1.33em 1.5em;
+  margin: 0em 2.5em 1.33em 2.5em;
   padding-top: 4em;
   ${"" /* width: 100%;
   position: fixed;

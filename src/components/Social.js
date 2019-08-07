@@ -8,7 +8,7 @@ const ConsoleLog = ({ children }) => {
   return false
 }
 const SociaStyle = styled.div`
-	margin: 0 auto;
+	margin: 0.67em auto 0;
 	display: block:
 `
 

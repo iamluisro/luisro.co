@@ -10,7 +10,7 @@ const ConsoleLog = ({ children }) => {
 
 const PastWorkContainer = styled.div`
   display: grid;
-  margin: 1.25em;
+  margin: 1.25em 2.5em 1.25em 2.5em;
   grid-template-columns: 1fr;
 `
 const StyledPostDiv = styled.div`
@@ -64,7 +64,7 @@ export const MoreButton = styled.button`
   margin: auto;
   background-color: #684a83;
   color: white;
-  width: 30%;
+  width: 45%;
   font-size: 0.9rem;
   padding: 0.6rem;
   font-weight: 500;
