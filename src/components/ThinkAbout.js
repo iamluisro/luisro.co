@@ -147,7 +147,6 @@ const ThinkAbout = props => {
       <Link to="/thinkAbout" style={{ textDecoration: "none" }}>
         <MoreButton>More Thoughts</MoreButton>
       </Link>
-      <ConsoleLog></ConsoleLog>
     </ThinkContainer>
   )
 }
