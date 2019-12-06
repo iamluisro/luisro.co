@@ -45,6 +45,8 @@ img {
   ${above.mediumL`
    main{
       padding-top: calc(3.5rem - 100vh);
+      margin: 0;
+      background-color: red;
     }
     `}
   ${above.large`
