@@ -15,10 +15,9 @@ const PastWorkContainer = styled.div`
 `
 const StyledPostDiv = styled.div`
   margin: 0.67em 0 0.67em 0;
-  padding: 0em 0 0.67em 0;
+  padding: 0em 0 0 0;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
-  border: 0;
 `
 
 const StyledDescriptionPostDiv = styled.div`
@@ -26,7 +25,7 @@ const StyledDescriptionPostDiv = styled.div`
 `
 
 const AboutImg = styled.img`
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px 0 0 4px;
   align-items: center;
   width: 100%;
 `
@@ -37,6 +36,9 @@ const StyledHeaderLink = styled(props => <Link {...props} />)`
   color: #684a83;
   font-size: 2em;
   text-decoration: none;
+
+  
+  }
 `
 const StyledDescription = styled.div`
   margin: 1em 0 0 0;
@@ -48,7 +50,12 @@ const StyledDescription = styled.div`
 const StyledPostLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   color: #684a83;
-  margin: 0 0 0.67em 0;
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: stretch;
+  }
 `
 
 const PostinLink = styled.p`

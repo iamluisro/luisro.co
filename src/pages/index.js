@@ -1,23 +1,29 @@
-import React from "react"
-
-import { SEO, ThinkAbout, Intro, PastWork, HowiHelp } from "../components"
-
-import About from "../components/About"
+import React, { Fragment } from "react"
+import {
+  SEO,
+  About,
+  Sidebar,
+  Info,
+  Intro,
+  ThinkAbout,
+  PastWork,
+  HowiHelp,
+} from "../components"
 
 const IndexPage = () => {
   return (
-    <>
+    <div class="main-container">
       <SEO title="Home" />
-      <div>
+      <Sidebar>
         <About />
-      </div>
-      <div>
         <Intro />
+      </Sidebar>
+      <Info>
         <ThinkAbout />
         <PastWork />
         <HowiHelp />
-      </div>
-    </>
+      </Info>
+    </div>
   )
 }
 
