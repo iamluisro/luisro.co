@@ -19,11 +19,20 @@ export const above = Object.keys(size).reduce((acc, label) => {
 export const GlobalStyles = createGlobalStyle`
   .___gatsby{
     position: absolute;
+
+}
+
+
+  
   }
   main{
     padding-top: 0;
     margin-bottom: 0;
     background: #ebebeb;
+    
+  .main-container {
+    display: grid;
+  }
     
   }
   body {
@@ -45,6 +54,19 @@ img {
   ${above.mediumL`
    main{
       padding-top: calc(3.5rem - 100vh);
+      margin: 0;
+      background: #ebebeb;
+
+    .main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 3em;
+
+    .Info-container{
+      overflow: auto;
+    height: 125vh;
+    }
+    }
     }
     `}
   ${above.large`

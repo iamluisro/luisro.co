@@ -15,10 +15,9 @@ const ThinkContainer = styled.div`
 `
 const StyledPostDiv = styled.div`
   margin: 0.67em 0 0.67em 0;
-  padding: 0em 0 0.67em 0;
+  padding: 0em 0 0 0;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
-  border: 0;
 `
 
 const StyledDescriptionPostDiv = styled.div`
@@ -26,7 +25,7 @@ const StyledDescriptionPostDiv = styled.div`
 `
 
 const AboutImg = styled.img`
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px 0 0 4px;
   align-items: center;
   width: 100%;
 `
@@ -46,9 +45,18 @@ const StyledDescription = styled.div`
 `
 
 const StyledPostLink = styled(props => <Link {...props} />)`
-  text-decoration: none;
-  margin: 0 0 0.67em 0;
+  text-decoration: none;  
   color: #684a83;
+
+
+ 
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: stretch;
+}
+  }
 `
 
 const PostinLink = styled.p`
@@ -119,9 +127,11 @@ const ThinkAbout = props => {
 
   return (
     <ThinkContainer>
-      <StyledHeaderLink to="/thinkAbout">
-        This is what I think about
-      </StyledHeaderLink>
+      <div>
+        <StyledHeaderLink to="/thinkAbout">
+          This is what I think about
+        </StyledHeaderLink>
+      </div>
       {posts.allContentfulBlogPost.edges.map(({ node: post }) => (
         <StyledPostDiv key={post.id}>
           <StyledPostLink to={`/${post.slug}`}>
