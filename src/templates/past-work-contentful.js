@@ -19,19 +19,36 @@ const AboutImg = styled.img`
 `
 const PostinLink = styled.p`
   margin: 0em;
-  font-size: 2em;
-  font-weight: 700;
+  font-size: 3em;
   color: black;
 `
 
 const StyledPost = styled.p`
   margin-top: 0.67em;
-  font-size: 1em;
+  font-size: 1.5em;
   color: black;
 `
-const StyledTags = styled.div`
-  display: inline;
-  float: center;
+const StyledTagsDiv = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0.67em 0.67em 0.67em 0;
+`
+
+const StyledTagsBox = styled.div`
+  background: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
+  margin-right: 0.5em;
+`
+
+const StyledPrevNextDiv = styled.div`
+  display: flex;
+`
+
+const StyledPevNext = styled.p`
+  margin-right: 0.67em;
 `
 
 const PastWorkContentfulTemplate = props => {
@@ -40,39 +57,40 @@ const PastWorkContentfulTemplate = props => {
   return (
     <>
       <PostContainer>
-        <PostinLink>{title}</PostinLink>
         <AboutImg src={heroImage.fluid.src} alt={heroImage.description} />
+        <PostinLink>{title}</PostinLink>
 
         <StyledPost
           dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
         />
+        <StyledTagsDiv>
+          Tags:&nbsp;
+          {tags.map((tag, index) => (
+            <StyledTagsBox key={index}> {tag} </StyledTagsBox>
+          ))}
+        </StyledTagsDiv>
+
         <div>
-          Topics:
-          {tags.map((tag, index) => (
-            <StyledTags key={index}> {tag} |</StyledTags>
-          ))}
+          Read More:
+          <StyledPrevNextDiv>
+            <StyledPevNext>
+              {" "}
+              {previous && (
+                <Link to={previous.slug} rel="prev">
+                  ← {previous.title}
+                </Link>
+              )}{" "}
+            </StyledPevNext>
+            <StyledPevNext>
+              {" "}
+              {next && (
+                <Link to={next.slug} rel="prev">
+                  {next.title} →
+                </Link>
+              )}{" "}
+            </StyledPevNext>
+          </StyledPrevNextDiv>
         </div>
-        <ConsoleLog>
-          {tags.map((tag, index) => (
-            <StyledTags key={index}>{tag}</StyledTags>
-          ))}
-        </ConsoleLog>
-        <p>
-          {" "}
-          {previous && (
-            <Link to={previous.slug} rel="prev">
-              ← {previous.title}
-            </Link>
-          )}{" "}
-        </p>
-        <p>
-          {" "}
-          {next && (
-            <Link to={next.slug} rel="prev">
-              {next.title} →
-            </Link>
-          )}{" "}
-        </p>
       </PostContainer>
     </>
   )
