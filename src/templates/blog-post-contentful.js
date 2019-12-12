@@ -10,6 +10,10 @@ const ConsoleLog = ({ children }) => {
 const PostContainer = styled.div`
   margin: 3.5em 0.67em 0em 0.67em;
   padding: 0.67em;
+
+  @media only screen and (min-width: 768px) {
+    padding: 2em 8em;
+  }
 `
 
 const AboutImg = styled.img`
@@ -21,17 +25,31 @@ const PostinLink = styled.p`
   margin: 0em;
   font-size: 3em;
   color: black;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0.67em 2em 0 2em;
+    padding: 0em;
+  }
 `
 
 const StyledPost = styled.p`
   margin-top: 0.67em;
   font-size: 1.5em;
   color: black;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0.67em 4em 0 4em;
+    padding: 0em;
+  }
 `
 const StyledTagsDiv = styled.div`
   display: flex;
   align-items: center;
   margin: 0.67em 0.67em 0.67em 0;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0.67em 6em 0 6em;
+  }
 `
 
 const StyledTagsBox = styled.div`
@@ -41,6 +59,11 @@ const StyledTagsBox = styled.div`
   border-radius: 4px;
   box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
   margin-right: 0.5em;
+`
+const StyledReadMoreDiv = styled.div`
+  @media only screen and (min-width: 768px) {
+    margin: 0.67em 6em 0 6em;
+  }
 `
 
 const StyledPrevNextDiv = styled.div`
@@ -69,7 +92,7 @@ const BlogPostContentfulTemplate = props => {
           ))}
         </StyledTagsDiv>
 
-        <div>
+        <StyledReadMoreDiv>
           Read More:
           <StyledPrevNextDiv>
             <StyledPevNext>
@@ -89,7 +112,7 @@ const BlogPostContentfulTemplate = props => {
               )}{" "}
             </StyledPevNext>
           </StyledPrevNextDiv>
-        </div>
+        </StyledReadMoreDiv>
       </PostContainer>
     </>
   )
