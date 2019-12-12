@@ -25,9 +25,13 @@ const StyledDescriptionPostDiv = styled.div`
 `
 
 const AboutImg = styled.img`
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px 4px 0 0;
   align-items: center;
   width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    border-radius: 4px 0 0 4px;
+  }
 `
 
 const StyledHeaderLink = styled(props => <Link {...props} />)`
@@ -45,17 +49,13 @@ const StyledDescription = styled.div`
 `
 
 const StyledPostLink = styled(props => <Link {...props} />)`
-  text-decoration: none;  
+  text-decoration: none;
   color: #684a83;
-
-
- 
 
   @media only screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 250px 1fr;
     align-items: stretch;
-}
   }
 `
 
