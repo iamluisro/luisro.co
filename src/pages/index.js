@@ -12,7 +12,7 @@ import {
 
 const IndexPage = () => {
   return (
-    <div class="main-container">
+    <div className="main-container">
       <SEO title="Home" />
       <Sidebar>
         <About />

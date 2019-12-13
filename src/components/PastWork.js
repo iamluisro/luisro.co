@@ -25,9 +25,13 @@ const StyledDescriptionPostDiv = styled.div`
 `
 
 const AboutImg = styled.img`
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px 4px 0 0;
   align-items: center;
   width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    border-radius: 4px 0 0 4px;
+  }
 `
 
 const StyledHeaderLink = styled(props => <Link {...props} />)`
@@ -36,10 +40,8 @@ const StyledHeaderLink = styled(props => <Link {...props} />)`
   color: #684a83;
   font-size: 2em;
   text-decoration: none;
-
-  
-  }
 `
+
 const StyledDescription = styled.div`
   margin: 1em 0 0 0;
   align-items: center;
@@ -71,7 +73,7 @@ export const MoreButton = styled.button`
   margin: auto;
   background-color: #684a83;
   color: white;
-  width: 45%;
+  width: 50%;
   font-size: 0.9rem;
   padding: 0.6rem;
   font-weight: 500;
@@ -82,9 +84,10 @@ export const MoreButton = styled.button`
 const StyledPublishedDate = styled.p`
   font-size: 0.67em;
   margin: 0.67em 0 0 0;
+  color: #684a83;
 `
 
-export default function PastWork({ props }) {
+const PastWork = props => {
   const pastWork = useStaticQuery(
     graphql`
       query GET_PASTWORK_DATA {
@@ -96,6 +99,7 @@ export default function PastWork({ props }) {
         }
 
         allContentfulPastWork(
+          filter: { node_locale: { in: "en-US" } }
           sort: { fields: [publishDate], order: DESC }
           limit: 3
         ) {
@@ -124,7 +128,11 @@ export default function PastWork({ props }) {
   )
   return (
     <PastWorkContainer>
-      <StyledHeaderLink to="/pastWork">This is what I've done</StyledHeaderLink>
+      <div>
+        <StyledHeaderLink to="/pastWork">
+          This is what I've done
+        </StyledHeaderLink>
+      </div>
 
       {pastWork.allContentfulPastWork.edges.map(({ node: pw }) => (
         <StyledPostDiv key={pw.id}>
@@ -142,7 +150,7 @@ export default function PastWork({ props }) {
               />
               <StyledPublishedDate>
                 {" "}
-                {moment(pw.publishDate).format("MMM DD, YYYY")}
+                Published: {moment(pw.publishDate).format("MMM DD, YYYY")}
               </StyledPublishedDate>
             </StyledDescriptionPostDiv>
           </StyledPostLink>
@@ -154,3 +162,5 @@ export default function PastWork({ props }) {
     </PastWorkContainer>
   )
 }
+
+export default PastWork

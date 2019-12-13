@@ -41,6 +41,7 @@ const StyledHeaderLink = styled(props => <Link {...props} />)`
   font-size: 2em;
   text-decoration: none;
 `
+
 const StyledDescription = styled.div`
   margin: 1em 0 0 0;
   align-items: center;
@@ -98,6 +99,7 @@ const ThinkAbout = props => {
         }
 
         allContentfulBlogPost(
+          filter: { node_locale: { in: "en-US" } }
           sort: { fields: [publishDate], order: DESC }
           limit: 3
         ) {
