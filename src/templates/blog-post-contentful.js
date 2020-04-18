@@ -37,6 +37,18 @@ const StyledPost = styled.p`
   font-size: 1.5em;
   color: black;
 
+  pre {
+    font-size: 2rem;
+    padding: 1em;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+  }
+
   @media only screen and (min-width: 768px) {
     margin: 0.67em 4em 0 4em;
     padding: 0em;
